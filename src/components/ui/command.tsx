@@ -68,7 +68,7 @@ function CommandDialog({
   );
 }
 
-function CommandRsponsiveDialog({
+function CommandResponsiveDialog({
   title = "Command Palette",
   description = "Search for a command to run...",
   children,
@@ -229,7 +229,7 @@ function CommandShortcut({
 
 export {
   Command,
-  CommandRsponsiveDialog,
+  CommandResponsiveDialog,
   CommandDialog,
   CommandInput,
   CommandList,
