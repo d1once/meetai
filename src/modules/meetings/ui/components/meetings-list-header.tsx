@@ -15,8 +15,8 @@ export const MeetingsListHeader = () => {
   const [filters, setFilters] = useMeetingsFilters();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const isAnyFilterMpdified =
-    !!filters.status || !filters.search || !!filters.agentId;
+  const isAnyFilterModified =
+    !!filters.status || !!filters.search || !!filters.agentId;
 
   const onClearFilters = () => {
     setFilters({
@@ -43,7 +43,7 @@ export const MeetingsListHeader = () => {
             <MeetingsSearchFilter />
             <StatusFilter />
             <AgentIdFilter />
-            {isAnyFilterMpdified && (
+            {isAnyFilterModified && (
               <Button variant="outline" onClick={onClearFilters}>
                 <XCircleIcon className="size-4" />
                 Clear
